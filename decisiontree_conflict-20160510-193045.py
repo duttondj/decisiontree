@@ -269,5 +269,6 @@ if __name__ == "__main__":
 	print("Input data and predictions:")
 	predict("attributes/RestaurantAttributes.txt", "input_data/Restaurant.csv", "RestOut.txt")
 	print
-	print("Cross Validation:")
-	print(cross_validation("attributes/RestaurantAttributes.txt", "training_data/Restaurant.csv", 10, 100))
+	print("Cross Validation (1 trial):    " + str(cross_validation("attributes/RestaurantAttributes.txt", "training_data/Restaurant.csv", 10, 1)))
+	print("Cross Validation (10 trials):  " + str(cross_validation("attributes/RestaurantAttributes.txt", "training_data/Restaurant.csv", 10, 10)))
+	print("Cross Validation (100 trials): " + str(cross_validation("attributes/RestaurantAttributes.txt", "training_data/Restaurant.csv", 10, 100)))
